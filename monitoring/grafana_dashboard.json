@@ -1,0 +1,30 @@
+{
+  "dashboard": {
+    "id": null,
+    "title": "System Monitoring Dashboard",
+    "timezone": "browser",
+    "panels": [
+      {
+        "type": "graph",
+        "title": "CPU Usage",
+        "targets": [
+          {
+            "expr": "system_cpu_usage",
+            "format": "time_series"
+          }
+        ]
+      },
+      {
+        "type": "graph",
+        "title": "Memory Usage",
+        "targets": [
+          {
+            "expr": "system_memory_usage",
+            "format": "time_series"
+          }
+        ]
+      }
+    ]
+  }
+}
+

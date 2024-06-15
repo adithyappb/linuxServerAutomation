@@ -1,0 +1,5 @@
+0 0 * * * /usr/local/bin/collect_logs.sh
+0 1 * * * /usr/local/bin/rotate_logs.sh
+0 2 * * * /usr/local/bin/capture_stack_trace.sh
+0 3 * * * /usr/local/bin/backup_configs.sh
+

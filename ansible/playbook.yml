@@ -1,0 +1,36 @@
+---
+- name: Configure servers
+  hosts: all
+  tasks:
+    - name: Install necessary packages
+      apt:
+        name:
+          - apache2
+          - mysql-server
+          - python3
+          - python3-pip
+          - logrotate
+        state: present
+        update_cache: yes
+
+    - name: Copy configuration files
+      copy:
+        src: ../config/services/{{ item }}
+        dest: /etc/{{ item }}
+      with_items:
+        - apache.conf
+        - mysql.conf
+        - systemd.conf
+
+    - name: Setup logrotate configuration
+      copy:
+        src: ../config/logrotate.conf
+        dest: /etc/logrotate.d/custom
+
+    - name: Setup crontab
+      cron:
+        name: "Custom cron jobs"
+        minute: "0"
+        hour: "*"
+        job: "/usr/local/bin/backup_configs.sh"
+

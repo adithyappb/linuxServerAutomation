@@ -1,0 +1,12 @@
+groups:
+- name: system_alerts
+  rules:
+  - alert: HighCPUUsage
+    expr: system_cpu_usage > 80
+    for: 5m
+    labels:
+      severity: 'critical'
+    annotations:
+      summary: "High CPU usage detected"
+      description: "CPU usage is above 80% for more than 5 minutes."
+
