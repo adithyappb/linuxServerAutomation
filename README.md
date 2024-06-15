@@ -10,13 +10,13 @@ This project automates key Linux server administration tasks including log colle
 4) System Monitoring: Sets up monitoring with Prometheus and Grafana, integrates alerting mechanisms via Slack.
 
 ## Requirements
-Python 3.x
-Bash
-Ansible
-Prometheus
-Grafana
-Docker
-Node.js
+1) Python 3.x
+2) Bash
+3) Ansible
+4) Prometheus
+5) Grafana
+6) Docker
+7) Node.js
 
 ## Setup
 ## Install dependencies:
@@ -26,23 +26,23 @@ Node.js
 Update the ansible/hosts file with your server details.
 
 ## Run scripts:
-Log collection: ./scripts/collect_logs.sh
-Stack trace capture: ./scripts/capture_stack_trace.sh
-Configuration management: ansible-playbook ansible/playbook.yml
-Monitoring setup: ./scripts/setup_monitoring.sh
+1) Log collection: ./scripts/collect_logs.sh
+2) Stack trace capture: ./scripts/capture_stack_trace.sh
+3) Configuration management: ansible-playbook ansible/playbook.yml
+4) Monitoring setup: ./scripts/setup_monitoring.sh
 
 ## Usage
-Log Collection and Analysis:
-Run ./scripts/collect_logs.sh to collect logs.
-Logs are stored in /var/log/myapp/.
+1) Log Collection and Analysis:
+2) Run ./scripts/collect_logs.sh to collect logs.
+3) Logs are stored in /var/log/myapp/.
 
 ## Stack Trace Navigation:
-Capture stack traces with ./scripts/capture_stack_trace.sh.
-View stack traces on the web interface at http://localhost:8000.
+1) Capture stack traces with ./scripts/capture_stack_trace.sh.
+2) View stack traces on the web interface at http://localhost:8000.
 
 ## Configuration Management:
 Deploy configurations with ansible-playbook ansible/playbook.yml.
 
 ## System Monitoring:
-Access Prometheus at http://localhost:9090.
-View Grafana dashboards at http://localhost:3000.
+1) Access Prometheus at http://localhost:9090.
+2) View Grafana dashboards at http://localhost:3000.
